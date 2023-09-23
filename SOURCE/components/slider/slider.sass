@@ -1,0 +1,151 @@
+.slider__images-slide-inner
+	width: 100%
+	height: 100%
+	will-change: transform
+.slider__images-slide
+	overflow: hidden
+.slider__bg
+	width: 100%
+	height: 100%
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	user-select: none
+.slider__overlay
+	z-index: 1
+.slider__circle
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	margin: auto
+	width: calc(100vw - var(--gutter-horizontal) * 4)
+	height: calc(100vw - var(--gutter-horizontal) * 4)
+	border: 1px solid $borders-dark
+	border-radius: 100%
+	z-index: 1
+	pointer-events: none
+.slider__heading
+	display: inline-block
+	margin-top: 0
+	margin-bottom: 0
+
+.slider__arrow_absolute
+	position: absolute
+.slider__arrow
+	z-index: 60
+	+trans1
+	outline: none
+	&:focus, &:hover
+		outline: none
+	&.swiper-button-disabled
+		pointer-events: none
+		opacity: 0
+		visibility: hidden
+.slider__arrow_left
+	top: 50%
+	transform: translateY(-50%)
+	left: var(--gutter-horizontal)
+.slider__arrow_right
+	top: 50%
+	transform: translateY(-50%)
+	right: var(--gutter-horizontal)
+.swiper-lazy
+	max-width: 100%
+	opacity: 0
+	visibility: hidden
+	+trans1
+.swiper-lazy-loaded
+	opacity: 1
+	visibility: visible
+.slider__wrapper-canvas, .slider__wrapper-canvas-inner
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	pointer-events: none
+.slider__canvas
+	position: absolute
+	display: block
+	top: 50%
+	left: 50%
+	width: 100%
+	height: 100%
+	transform: translate(-50%, -50%)
+.slider__images-slide-inner_circle
+	width: calc(100vh - var(--gutter-horizontal) * 2.5)
+	height: calc(100vh - var(--gutter-horizontal) * 2.5)
+	max-width: 33vw
+	max-height: 33vw
+	overflow: hidden
+	margin: auto
+	.slider__bg
+		width: 100%
+		height: 100%
+@for $i from 1 through 10
+	[data-swiper-parallax-zoom='#{$i * 10%}']
+		.slider__bg, img
+			transform: scale(#{1 + calc($i / 10)})
+			transform-origin: center center
+.slider__zoom-container
+	transition: all 0.3s ease
+.slider__wrapper-arrows
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	height: 155px
+	z-index: 100
+.slider__wrapper-arrows_right
+	right: var(--gutter-horizontal)
+.slider__wrapper-arrows_right-mini
+	height: 105px
+	right: calc(var(--gutter-horizontal) - 11px)
+.slider__wrapper-arrows_bottom
+	top: auto
+	transform: none
+	bottom: var(--gutter-vertical)
+.slider_reveal
+	.slider-fullscreen-projects__images
+		.slider__images-slide-inner
+			opacity: 0
+			transition: all 0.3s ease
+			transform: scale(1.05)
+	.slider-fullscreen-projects__images_reveal
+		.swiper-slide
+			.slider__images-slide-inner
+				transform: scale(1.05)
+		.swiper-slide-active
+			.slider__images-slide-inner
+				transform: scale(1)
+		.slider__images-slide-inner
+			opacity: 1
+.slider__counter_current.slider__counter_current-huge
+	position: relative
+	top: auto
+	left: auto
+	text-align: center
+	@include fluid-type(180, 400)
+	.swiper-container
+		@include fluid('height', 180, 350)
+.slider__text
+	max-width: 500px
+[data-drag-cursor]
+	.swiper-wrapper
+		cursor: grab
+
+@media screen and (max-width: $md)
+	.slider__circle
+		width: calc(100vw + var(--gutter-horizontal) * 2)
+		height: calc(100vw + var(--gutter-horizontal) * 2)
+	.slider__wrapper-arrows
+		height: auto
+	.slider__wrapper-arrows_right-mini
+		right: calc(var(--gutter-horizontal) - 7px)
+	.slider__images-slide-inner_circle
+		max-width: 50vw
+		max-height: 50vw

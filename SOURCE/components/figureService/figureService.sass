@@ -1,0 +1,37 @@
+.figure-service
+	padding-left: 0
+	padding-right: 0
+.figure-service__content
+	display: flex
+	align-items: center
+	flex-direction: column
+	width: 100%
+	height: 100%
+.figure-service__footer
+	width: 100%
+	padding-top: 2em
+	border-top: 1px solid $borders-dark
+.figure-service__wrapper-bg
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+@media screen and (max-width: 1600px)
+	.figure-service
+		max-width: 900px
+
+@media screen and (max-width: $xl)
+	.figure-service
+		max-width: 800px
+		
+@media screen and (max-width: $md)
+	.figure-service__wrapper-bg
+		position: relative
+		top: auto
+		left: auto
+		transform: none
+		height: 500px
+		max-height: 50vh

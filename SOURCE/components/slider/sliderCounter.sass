@@ -1,0 +1,89 @@
+.slider__wrapper-counter
+	display: inline-block
+	width: 100px
+	height: 100px
+	z-index: 60
+	pointer-events: none
+.slider__counter
+	font-family: $font-secondary
+	overflow: hidden
+	pointer-events: none
+	.swiper-container
+		height: 43px
+.slider__counter_current
+	position: absolute
+	left: 20px
+	font-size: 48px
+	line-height: 1
+	text-align: left
+.slider__counter_total
+	position: absolute
+	bottom: 0
+	right: 0
+	font-size: 16px
+	text-align: right
+	line-height: 1
+.slider__counter-divider
+	border: 1px solid $borders-dark
+	position: absolute
+	left: 30px
+	bottom: 0
+	transform: rotate(-45deg)
+	transform-origin: left center
+	width: 100%
+	height: 1px
+.slider__counter_mini, .slider__total_mini
+	@include fluid-type(14, 18)
+	font-family: $font-secondary
+	height: 18px
+	line-height: 1
+.slider__counter_mini
+	.swiper-container
+		height: 18px
+
+
+@media screen and (max-width: $md)
+	.slider__counter
+		.swiper-container
+			height: 24px
+	.slider__counter-divider
+		position: relative
+		transform: none
+		top: auto
+		left: auto
+		right: auto
+		bottom: auto
+	.slider__counter_current
+		position: relative
+		top: auto
+		left: auto
+		right: auto
+		bottom: auto
+		font-size: 24px
+		text-align: center
+	.slider__counter_total
+		position: relative
+		top: auto
+		left: auto
+		right: auto
+		bottom: auto
+		font-size: 24px
+		text-align: center
+	.slider__wrapper-counter
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		width: 40px
+		height: 80px
+
+@media screen and (max-width: $xs)
+	.slider__counter
+		.swiper-container
+			height: 18px
+	.slider__counter_current
+		font-size: 18px
+	.slider__counter_total
+		font-size: 18px
+	.slider__wrapper-counter
+		width: 30px
+		height: 60px

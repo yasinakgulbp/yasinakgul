@@ -1,0 +1,54 @@
+.aside-counters_2, .aside-counters_3, .aside-counters_4
+	.aside-counters__wrapper-item
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 10px
+			bottom: 10px
+			right: 0
+			width: 1px
+			background-color: $borders-dark
+
+.aside-counters_2
+	.aside-counters__wrapper-item
+		&:nth-child(2)
+			&:after
+				display: none
+		&:last-child
+			&:after
+				display: none
+
+.aside-counters_3
+	.aside-counters__wrapper-item
+		&:nth-child(3)
+			&:after
+				display: none
+		&:last-child
+			&:after
+				display: none
+
+.aside-counters_4
+	.aside-counters__wrapper-item
+		&:nth-child(4)
+			&:after
+				display: none
+		&:last-child
+			&:after
+				display: none
+				
+@media only screen and (max-width: $md)
+	.aside-counters__wrapper-item
+		&:after
+			top: 0
+			bottom: 0
+	.aside-counters_3
+		.aside-counters__wrapper-item
+			&:nth-child(2)
+				&:after
+					display: none
+	.aside-counters_4
+		.aside-counters__wrapper-item
+			&:nth-child(2)
+				&:after
+					display: none

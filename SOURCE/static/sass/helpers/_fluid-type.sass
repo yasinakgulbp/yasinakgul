@@ -1,0 +1,6 @@
+@mixin fluid-type($min-font-size, $max-font-size, $min-vw: $min_width, $max-vw: $max_width)
+	font-size: calc(#{$min-font-size} * 1px)
+	@media screen and (min-width: $min-vw)
+		font-size: calc(#{$min-font-size} * 1px + (#{$max-font-size} - #{$min-font-size}) * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
+	@media screen and (min-width: $max-vw)
+		font-size: calc(#{$max-font-size} * 1px)

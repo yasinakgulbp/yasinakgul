@@ -1,0 +1,139 @@
+.list-projects
+	position: relative
+	z-index: 50
+.list-projects_hover
+	.list-projects__item
+		opacity: .05
+		border-color: rgba(0,0,0,0)
+		&:hover
+			opacity: 1
+.list-projects__item
+	display: block
+	position: relative
+	z-index: 60
+	border-bottom: 1px solid $borders-dark
+	color: $black
+	&.blend-difference
+		&:hover
+			color: #fff
+			.list-projects__wrapper-link
+				color: #fff
+
+.list-projects:not(.list-demos)
+	.list-projects__item
+		&:first-child
+			padding-top: 0
+		&:last-child
+			border-bottom: none
+			padding-bottom: 0
+.list-demos__item
+	border-bottom: none
+.list-demos__divider
+	display: block
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	margin: auto
+	width: 1px
+	height: 100%
+	background-color: $borders-dark
+.list-projects__heading
+	margin-top: 0
+	margin-bottom: 0
+	z-index: 50
+.list-projects__wrapper-link
+	color: $brown-grey
+	z-index: 50
+	padding-left: 120px
+	+trans1
+.list-projects__wrapper-cover
+	position: fixed
+	left: 0
+	top: 0
+	z-index: -1
+	// opacity: 0
+.list-projects__covers
+	display: flex
+	flex-wrap: wrap
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw !important
+	height: 100vh !important
+	pointer-events: none
+.list-projects__cover-reveal
+	position: relative !important
+	flex: 1 0 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	padding-bottom: initial !important
+	will-change: height transform
+	img
+		top: auto !important
+		left: auto !important
+		position: initial !important
+.list-projects__cover-wrapper
+	height: 0
+	// overflow: initial !important
+	padding-bottom: initial !important
+.list-projects__cover
+	display: none
+	flex: 1 0 50%
+	> div
+		width: 100%
+		height: 100%
+.list-projects__wrapper-cover-inner
+	position: relative
+.list-projects__items
+	position: relative
+	z-index: 150
+.list-project__canvas
+	position: fixed
+	top: 0
+	left: 0
+	pointer-events: none
+	z-index: 100
+.list-projects__wrapper-img
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	display: inline-block
+.list-projects__thumbnail
+	width: 240px
+	height: 240px
+.list-projects__thumbnail_small
+	width: 180px
+	height: 180px
+
+@media screen and (max-width: $sm)
+	.list-projects__item
+		flex-wrap: wrap
+	.list-projects__heading
+		display: inline-block
+		margin-top: 0.75em
+		margin-bottom: 0.5em
+	.list-projects__wrapper-link
+		line-height: 1
+		padding-left: 0
+	.list-projects__cover
+		display: block
+		margin-left: auto
+		margin-right: auto
+	.list-projects_hover
+		.list-projects__item
+			opacity: 1
+			border-color: $borders-dark
+			&:hover
+				opacity: 1
+	.list-project__canvas
+		display: none
+	.list-projects__thumbnail
+		margin-left: auto
+		margin-right: auto
+	.list-demos__item
+		padding-top: 0 !important
+		padding-bottom: 0 !important

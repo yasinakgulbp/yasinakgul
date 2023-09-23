@@ -1,0 +1,14 @@
+@for $i from 1 through 20
+	.grid_fluid-#{$i}
+		margin: -#{$i}vw
+		@media only screen and (max-width: $sm)
+			margin: -20px
+	.grid__item_fluid-#{$i}
+		padding: #{$i}vw
+		@media only screen and (max-width: $sm)
+			padding: 20px
+	.grid:not(.grid_filtered)
+		.grid__item_fluid-#{$i}-fancy
+			@media only screen and (min-width: $sm + 1px)
+				&:nth-of-type(3)
+					margin-top: #{$i * 2}vw

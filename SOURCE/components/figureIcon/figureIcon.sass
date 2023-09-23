@@ -1,0 +1,14 @@
+.figure-icon__wrapper-icon
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	@include fluid('width', 100, 160)
+	@include fluid('height', 100, 160)
+	border-radius: 50%
+	border: 1px solid $borders-dark
+	transition: border-color 0.3s ease
+	&:hover
+		border-color: $black
+		
+.figure-icon__icon
+	@include fluid-type(30, 40)

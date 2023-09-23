@@ -1,0 +1,36 @@
+.section-video__link
+	display: block
+	margin: auto
+	@include fluid('width', 80, 160)
+	@include fluid('height', 80, 160)
+	border-radius: 100%
+	will-change: transform
+	+small-caps
+	color: #fff
+	z-index: 60
+.section-video__link-inner
+	background-color: $black
+	color: #fff
+	border-radius: 100%
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+.no-touchevents
+	.section-video__link-inner[data-arts-cursor-label]
+		&:hover
+			.section-video__icon
+				opacity: 0
+				visibility: hidden
+				transform: translateY(10px)
+.section-video__container
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+.section-video__icon.material-icons
+	+trans1
+	@include fluid-type(24, 32)
+	> *
+		color: #fff !important

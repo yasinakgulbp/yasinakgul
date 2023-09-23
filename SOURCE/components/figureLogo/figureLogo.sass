@@ -1,0 +1,62 @@
+.figure-logo
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 340px
+	padding: 30px
+	backface-visibility: hidden
+	img
+		+trans1
+	&:hover
+		.figure-logo__description
+			transform: scaleY(1)
+			p
+				transform: translateY(0px)
+				opacity: 1
+				visibility: visible
+				transition-delay: 0.15s
+			.figure-logo__line
+				transition-delay: 0.2s
+				transform: scaleX(1)
+		img
+			transform: translateY(-15px)
+.figure-logo__description
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	text-align: center
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: $dark
+	color: #fff
+	+trans1
+	transform: scaleY(0)
+	transform-origin: bottom center
+	p
+		color: #fff
+		opacity: 0
+		visibility: hidden
+		transform: translateY(10px)	
+		+trans1
+.figure-logo__line
+	display: inline-block
+	width: 30px
+	height: 1px
+	background-color: #fff
+	transform: scaleX(0)
+	+trans1
+
+@media screen and (max-width: $xl)
+	.figure-logo
+		width: 270px
+		height: 270px
+		max-width: 100%
+		
+@media screen and (max-width: $md)
+	.figure-logo
+		width: 100%

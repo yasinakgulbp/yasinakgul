@@ -1,0 +1,38 @@
+.section-about
+	max-width: 1680px
+	margin-left: auto
+	margin-right: auto
+.section-about__offset-container
+	max-width: calc(100vw - var(--gutter-horizontal))
+	padding-right: 0
+	margin-left: 0
+	z-index: 10
+
+.section-about__content
+	z-index: 100
+.section-about__floating-image
+	margin-left: auto
+	z-index: 200
+	max-width: 420px
+	height: 420px
+	margin-bottom: -420px
+	top: -250px
+
+@media screen and (max-width: $xl)
+	.section-about__floating-image
+		max-width: 300px
+		height: 300px
+		margin-bottom: -300px
+		top: -200px
+
+@media screen and (max-width: $md)
+	.section-about__floating-image
+		margin-bottom: -150px
+
+@media screen and (max-width: $sm)
+	//
+	.section-about__floating-image
+		max-width: 200px
+		height: 200px
+		margin-bottom: -100px
+		top: -120px

@@ -1,0 +1,35 @@
+.filter
+	position: relative
+.filter__inner
+	position: relative
+.filter__item
+	+small-caps
+	padding-top: 1em
+	padding-bottom: 1em
+	cursor: pointer
+	+trans1
+	color: $brown-grey
+	&:not(.filter__item_active):hover
+		color: $black
+.filter__item_active
+	color: $black
+.filter__underline
+	display: block
+	position: absolute
+	bottom: 0
+	left: 0
+	background-color: $black
+	width: 0
+	height: 1px
+
+@media screen and (max-width: 1199px)
+	.filter__underline
+		display: none
+
+@media screen and (max-width: $md)
+	.filter
+		.filter__item
+			&:first-child
+				padding-top: 0
+			&:last-child
+				padding-bottom: 0

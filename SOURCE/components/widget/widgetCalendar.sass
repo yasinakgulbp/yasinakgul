@@ -1,0 +1,39 @@
+#wp-calendar
+	width: 100%
+	text-align: center
+	caption
+		caption-side: top
+		width: 100%
+		text-align: center
+		padding-top: 0
+		padding-bottom: 10px
+	th
+		font-weight: 600
+		padding: 5px
+		text-align: center
+	td
+		padding: 5px
+		&#next
+			text-align: right
+		&#prev
+			text-align: left
+	tbody
+		a
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 30px
+				height: 30px
+				border-radius: 100%
+				transform: translate(-50%, -50%)
+				z-index: -1
+				+trans1
+
+	tr
+		border-bottom: none
+	a
+		display: inline-block
+		position: relative
+		z-index: 50

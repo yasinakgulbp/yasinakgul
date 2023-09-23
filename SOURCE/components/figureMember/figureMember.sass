@@ -1,0 +1,60 @@
+.figure-member_has-social
+	&:hover
+		.figure-member__avatar img
+			transform: scale(1.1)
+		.figure-member__headline
+			width: 80px
+		.figure-member__position
+			transition-delay: 50ms
+			transform: translateY(-30px)
+			opacity: 0
+			visibility: hidden
+		.figure-member__footer
+			.figure-member__name
+				transform: translateY(-20px)
+				opacity: 0
+				visibility: hidden
+				transition-delay: 0ms
+		.figure-member__social
+			li a
+				transform: translateY(0px)
+				opacity: 1
+				visibility: visible
+				@for $i from 1 through 10
+					&:nth-child(#{$i})
+						transition-delay: 50ms + $i * 30ms
+
+.figure-member__avatar
+	overflow: hidden
+	img
+		+trans1
+.figure-member__footer
+	position: relative
+.figure-member__name
+	margin-top: 0
+	margin-bottom: 0
+	+trans1
+	transition-delay: 150ms
+.figure-member__position
+	// margin-top: 0.5em
+	+trans1
+	transition-delay: 150ms
+.figure-member__headline
+	display: inline-block
+	width: 60px
+	height: 1px
+	vertical-align: middle
+	background-color: var(--color-gray-1)
+	+trans1
+.figure-member__social
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	li a
+		transform: translateY(30px)
+		+trans1
+		opacity: 0
+		visibility: hidden
+		&:last-child
+			margin-right: 0

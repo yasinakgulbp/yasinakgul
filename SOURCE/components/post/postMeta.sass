@@ -1,0 +1,14 @@
+.post-meta
+	+reset-ul
+	li
+		display: inline-flex
+		flex-wrap: wrap
+		align-items: center
+	li:not(:last-child):after
+		content: '/'
+		color: $black
+		display: inline-block
+		margin-left: 6px
+		margin-right: 5px
+	ul
+		padding-left: 0

@@ -1,0 +1,107 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .xl
+	font-family: var(--font-secondary)
+h1, h2, h3
+	margin-top: 0.5em
+	margin-bottom: 0.5em
+h4, h5, h6
+	margin-top: 0.75em
+	margin-bottom: 0.75em
+.xl
+	@include fluid-type(var(--xl-min-font-size), var(--xl-max-font-size))
+	font-weight: normal
+	line-height: var(--xl-line-height)
+	color: var(--xxl-color-dark)
+h1, .h1
+	@include fluid-type(var(--h1-min-font-size), var(--h1-max-font-size))
+	font-weight: normal
+	line-height: var(--h1-line-height)
+	color: var(--h1-color-dark)
+h2, .h2
+	@include fluid-type(var(--h2-min-font-size), var(--h2-max-font-size))
+	font-weight: normal
+	line-height: var(--h2-line-height)
+	color: var(--h2-color-dark)
+h3, .h3
+	@include fluid-type(var(--h3-min-font-size), var(--h3-max-font-size))
+	font-weight: normal
+	line-height: var(--h3-line-height)
+	color: var(--h3-color-dark)
+h4, .h4
+	@include fluid-type(var(--h4-min-font-size), var(--h4-max-font-size))
+	font-weight: bold
+	line-height: var(--h4-line-height)
+	color: var(--h4-color-dark)
+h5, .h5
+	@include fluid-type(var(--h5-min-font-size), var(--h5-max-font-size))
+	font-weight: bold
+	line-height: var(--h5-line-height)
+	color: var(--h5-color-dark)
+h6, .h6
+	@include fluid-type(var(--h6-min-font-size), var(--h6-max-font-size))
+	font-weight: bold
+	line-height: var(--h6-line-height)
+	color: var(--h6-color-dark)
+p
+	margin-top: 1em
+	margin-bottom: 1em
+	@include fluid-type(var(--paragraph-min-font-size), var(--paragraph-max-font-size))
+	line-height: var(--paragraph-line-height)
+	color: var(--paragraph-color-dark)
+.paragraph
+	@include fluid-type(var(--paragraph-min-font-size), var(--paragraph-max-font-size))
+	line-height: var(--paragraph-line-height)
+	color: var(--paragraph-color-dark)
+blockquote, .blockquote
+	display: block
+	@include fluid-type(var(--blockquote-min-font-size), var(--blockquote-max-font-size))
+	line-height: var(--blockquote-line-height)
+	font-style: italic
+	margin-top: 2em
+	margin-bottom: 2em
+	color: var(--blockquote-color-dark)
+	p
+		margin-top: 0
+		@include fluid-type(var(--blockquote-min-font-size), var(--blockquote-max-font-size))
+		line-height: var(--blockquote-line-height)
+		&:last-child
+			margin-bottom: 0
+	cite
+		@include fluid-type(var(--paragraph-min-font-size), var(--paragraph-max-font-size))
+		font-style: normal
+		color: var(--blockquote-color-dark)
+strong, b, .strong
+	font-weight: bold
+em, i, .em
+	font-style: italic
+small, .small
+	display: block
+	font-size: 14px
+.small-caps
+	+small-caps
+	color: var(--color-gray-1)
+.has-drop-cap:not(:focus):not(.has-drop-cap_split)
+	&:first-letter
+		@include dropcap
+		&:after
+			content: ''
+			display: table
+			clear: both
+.split-text:not(.js-split-text)
+	.has-drop-cap
+		> div:first-child
+			display: inline-block !important
+			float: left
+			&:after
+				content: ''
+				display: table
+				clear: both
+.drop-cap
+	@include dropcap
+
+@media screen and (max-width: $sm)
+	blockquote, .blockquote
+		@include fluid-type(var(--paragraph-min-font-size), var(--paragraph-max-font-size))
+		line-height: var(--paragraph-line-height)
+		p
+			@include fluid-type(var(--paragraph-min-font-size), var(--paragraph-max-font-size))
+			line-height: var(--paragraph-line-height)

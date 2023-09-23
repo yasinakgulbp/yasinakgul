@@ -1,0 +1,66 @@
+.post
+	max-width: 900px
+	blockquote
+		&:before
+			content: url('../img/general/quote-black.svg')
+			display: block
+			width: 2.5em
+			height: 2.5em
+			float: left
+			margin-right: 1em
+			margin-top: 0.33em
+		cite
+			display: block
+			text-align: right
+			&:before
+				content: ''
+				width: 60px
+				height: 1px
+				display: inline-block
+				vertical-align: middle
+				background-color: var(--color-gray-1)
+				margin: 1em
+.post__content, .post__comments
+	> *:first-child
+		margin-top: 0
+	> *:last-child
+		margin-bottom: 0
+	ul
+		+reset-ul
+		margin-bottom: 1.5em
+		li
+			display: block
+			margin-top: 1em
+			margin-bottom: 1em
+		ul, ol
+			padding-left: 1em
+	ul:not(.wp-block-gallery)
+		padding-left: 0.25em
+		> li
+			&:before
+				content: ''
+				display: inline-block
+				width: 10px
+				height: 1px
+				vertical-align: middle
+				margin-right: 0.5em
+				margin-bottom: 3px
+	ol
+		margin-bottom: 24px
+		padding-left: 1.5em
+		li
+			display: list-item
+			margin-top: 0.75em
+			margin-bottom: 0.75em
+		ul, ol
+			padding-left: 1.5em
+.post__media
+	margin-bottom: 2em
+.post__tags
+	border-top: 2px solid $black
+	padding-top: 1.5em
+
+.post__read-more
+	padding: 16px 30px
+.sticky
+	padding: 50px

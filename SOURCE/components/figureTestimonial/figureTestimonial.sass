@@ -1,0 +1,23 @@
+.figure-testimonial__avatar
+	@include fluid('width', 120, 400)
+	@include fluid('height', 120, 400)
+	border-radius: 100%
+.figure-testimonial__text
+	margin-top: 0
+	margin-bottom: 0
+.figure-testimonial__sign
+	width: 2.5em
+	height: 2.5em
+	margin-bottom: 1em
+.figure-testimonial__author
+	margin-top: 2em
+
+@media screen and (max-width: $md)
+	.figure-testimonial
+		text-align: center
+	.figure-testimonial__avatar
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 1em
+	.figure-testimonial__sign
+		display: none

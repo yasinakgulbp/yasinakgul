@@ -1,0 +1,22 @@
+{
+  "name": "rhye",
+  "version": "1.7.0",
+  "description": "AJAX Portfolio HTML5 Template",
+  "main": "gulpfile.js",
+  "author": "Artem Semkin",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-noop": "^1.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-wrapper": "^1.0.0",
+    "sass": "^1.54.9"
+  }
+}

@@ -1,0 +1,14 @@
+.section-blog__post
+	max-width: 940px
+.section-blog__sidebar
+	max-width: 370px
+.section-blog__wrapper-pagination
+	@include fluid('margin-top', 40, 90)
+.section-blog__wrapper-post
+	@include fluid('margin-bottom', 40, 90)
+	&:last-child
+		margin-bottom: 0 !important
+
+@media screen and (max-width: $md)
+	.section-blog__sidebar
+		max-width: 100%

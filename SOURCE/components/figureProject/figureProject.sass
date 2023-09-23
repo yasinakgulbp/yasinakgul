@@ -1,0 +1,103 @@
+.figure-project
+	display: block
+.figure-project:not(.figure-project_no-hover)
+	&:hover:not(:focus)
+		.figure-project__content
+			transform: translateY(-15px)
+.figure-project__link
+	position: relative
+	display: block
+	z-index: 50
+.figure-project__heading
+	position: relative
+	margin-top: 0
+	margin-bottom: 0
+	color: $black
+	z-index: 50
+.figure-project__category
+	line-height: 1
+.figure-project__content
+	transition: transform 0.3s ease
+	&.text-right
+		padding-right: calc(var(--gutter-horizontal) - 20px)
+	&.text-left
+		padding-left: calc(var(--gutter-horizontal) - 20px)
+.figure-project__letter
+	display: inline-block
+	line-height: 1
+	@include fluid-type(67, 400)
+	color: $black
+	opacity: .05
+	font-family: $font-secondary
+.figure-project__wrapper-img
+	position: relative
+.figure-project__wrapper-letter
+	display: inline-block
+	position: absolute
+	bottom: 0
+	left: 0
+	transform: translate(-50%, 50%)
+	z-index: 0
+.figure-project__content_absolute
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 80px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	color: #fff
+	z-index: 50
+	+trans1
+	transform: none !important
+.figure-project__overlay-top
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+.figure-project__category_absolute
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding: 80px
+	margin-top: 0
+	+trans1
+.figure-project__wrapper-content
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 50
+	opacity: 0
+	visibility: hidden
+	+trans2
+	transition-delay: 0s
+.figure-project_hover-inner
+	.figure-project__overlay
+		z-index: 10
+		opacity: 0
+		visibility: hidden
+		+trans2
+		
+	&:hover
+		.figure-project__overlay
+			opacity: 1
+			visibility: visible
+		.figure-project__wrapper-content
+			opacity: 1
+			visibility: visible
+
+@media screen and (max-width: $md)
+	.figure-project__content_absolute
+		padding: 40px
+	.figure-project__category_absolute
+		padding: 40px
+
+@media screen and (max-width: $xs)
+	.figure-project__content_absolute
+		padding: 30px
+	.figure-project__category_absolute
+		padding: 30px

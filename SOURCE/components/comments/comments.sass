@@ -1,0 +1,95 @@
+// .comments-area, .comment-respond
+// .comments-title
+// 	font-size: 24px
+// 	font-weight: 600
+// 	line-height: 1.5
+// 	margin-top: 0
+// 	margin-bottom: 10px
+.comments-title, .comment-reply-title
+	font-weight: bold
+	margin-top: 0
+	margin-bottom: 1em
+.comment-list
+	+reset-ul
+	padding-left: 0 !important
+	> li
+		padding-top: 1em
+		padding-bottom: 1em
+		ol.children
+			+reset-ul
+			padding-left: 4%
+			li
+				padding-top: 1em
+				padding-bottom: 1em
+			li:last-child
+				padding-bottom: 0
+	> li:not(:last-child)
+		border-bottom: 1px solid $borders-dark
+	> ol
+		+reset-ul
+.comment-author
+	max-width: 100px
+	margin-right: 2em
+	flex: 0 0 auto
+	.avatar
+		position: relative
+		width: 100%
+		max-width: 100px
+		max-height: 100px
+		border-radius: 100%
+		display: block
+.comment-meta
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 0.5em
+.comment-metadata
+	+small-caps
+	margin-left: 10px
+	a
+		border-bottom: none !important
+.comment-body
+	display: flex
+	.fn
+		font-family: $font-secondary
+		font-size: 20px
+		font-weight: bold
+		line-height: 1.7
+.comment-content
+	width: 100%
+.reply
+	line-height: 1
+	margin-top: 1em
+	margin-bottom: 0.5em
+.comment-reply-link
+	+small-caps
+	border-bottom: none !important
+	margin-right: 24px
+	&:before
+		content: '\f112'
+		font-family: 'FontAwesome'
+		text-transform: none
+		margin-right: 8px
+.comment-respond
+	margin-top: 30px
+.comment-edit-link
+	+small-caps
+	color: var(--color-accent-primary)
+	border-bottom: none !important
+	&:before
+		content: '\f044'
+		font-family: 'FontAwesome'
+		text-transform: none
+		margin-right: 6px
+
+@media only screen and (max-width: $md)
+	.comment-author
+		margin-right: 1em
+		.avatar
+			max-width: 50px
+			max-height: 50px
+	.comment-meta
+		flex-wrap: wrap
+	.comment-metadata
+		margin-top: 5px
+		margin-left: 0

@@ -1,0 +1,94 @@
+.js-circle-button[data-arts-os-animation]
+	visibility: visible !important
+
+.circle-button
+	position: relative
+	display: inline-flex
+	vertical-align: bottom
+	align-items: center
+	justify-content: center
+	@include fluid('width', 100, 160)
+	@include fluid('height', 100, 160)
+	transition: none
+.circle-button_link
+	@include fluid('width', 80, 100)
+	@include fluid('height', 80, 100)
+	.circle-button__outer
+		z-index: 50
+	.circle-button__label
+		color: #fff
+	.circle-button__icon
+		color: --var(--color-gray-1)
+		line-height: 0
+		z-index: 50
+	.circle-button__inner
+		.svg-circle
+			border: none
+			background-color: var(--color-dark-1)
+			@include fluid('width', 90, 120)
+			@include fluid('height', 90, 120)
+	.circle-button__circle
+		&:hover
+			.svg-circle
+				transform: scale(1.0)
+		
+.circle-button__outer
+	width: 100%
+	height: 100%
+.circle-button__wrapper-label
+	width: 100%
+	height: 100%
+.circle-button__inner
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	.svg-circle
+		@include fluid('width', 60, 100)
+		@include fluid('height', 60, 100)
+		border: 1px solid rgba(104, 104, 104, .5)
+		border-radius: 100%
+		+trans1
+	.circle
+		stroke-width: 4px
+.circle-button__icon
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	z-index: 0
+	pointer-events: none
+	svg
+		height: 35px
+.circle-button__circle
+	+trans1
+	&:hover
+		.svg-circle
+			transform: scale(0.85)
+			border-color: rgba(104, 104, 104, 1)
+		~ .circle-button__icon .svg-mouse__wheel
+			transform: translateY(4px)
+.circle-button__icon .svg-mouse__wheel
+	+trans1
+.no-touchevents
+	.circle-button__icon-mouse
+		display: block !important
+	.circle-button__icon-touch
+		display: none !important
+.touchevents
+	.circle-button__icon-mouse
+		display: none !important
+	.circle-button__icon-touch
+		display: block !important
+
+@media screen and (max-width: $md)
+	.circle-button__label
+		font-size: 10px !important
+		letter-spacing: 0.3px !important
+	.circle-button__icon
+		svg
+			height: 27px

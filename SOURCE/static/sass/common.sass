@@ -1,0 +1,141 @@
+\:root
+	/* Fonts */
+	--font-primary: 'Raleway', sans-serif
+	--font-secondary: 'Cinzel', serif
+	/* Colors */
+	--color-dark-1: #111111
+	--color-dark-2: #262626
+	--color-dark-3: #333333
+	--color-dark-4: #555555
+	--color-light-1: #eeece6
+	--color-light-2: #f2f1ed
+	--color-light-3: #f7f6f3
+	--color-light-4: #f1e9db
+	--color-gray-1: #888888
+	--color-gray-2: #cccccc
+	/* XL heading */
+	--xl-max-font-size: 188
+	--xl-min-font-size: 54
+	--xl-line-height: 1.1
+	--xl-color-light: #eeece6
+	--xl-color-dark: #333333
+	/* h1 heading */
+	--h1-max-font-size: 104
+	--h1-min-font-size: 35
+	--h1-line-height: 1.13
+	--h1-color-light: #eeece6
+	--h1-color-dark: #333333
+	/* h2 heading */
+	--h2-max-font-size: 65
+	--h2-min-font-size: 31
+	--h2-line-height: 1.31
+	--h2-color-light: #eeece6
+	--h2-color-dark: #333333
+	/* h3 heading */
+	--h3-max-font-size: 42
+	--h3-min-font-size: 24
+	--h3-line-height: 1.29
+	--h3-color-light: #eeece6
+	--h3-color-dark: #333333
+	/* h4 heading */
+	--h4-max-font-size: 26
+	--h4-min-font-size: 22
+	--h4-line-height: 1.62
+	--h4-color-light: #ffffff
+	--h4-color-dark: #262626
+	/* h5 heading */
+	--h5-max-font-size: 18
+	--h5-min-font-size: 18
+	--h5-line-height: 1.6
+	--h5-color-light: #ffffff
+	--h5-color-dark: #262626
+	/* h6 heading */
+	--h6-max-font-size: 14
+	--h6-min-font-size: 14
+	--h6-line-height: 1.6
+	--h6-color-light: #ffffff
+	--h6-color-dark: #262626
+	/* Blockquote */
+	--blockquote-max-font-size: 24
+	--blockquote-min-font-size: 16
+	--blockquote-line-height: 1.6
+	--blockquote-color-light: #ffffff
+	--blockquote-color-dark: #262626
+	/* Paragraph */
+	--paragraph-max-font-size: 18
+	--paragraph-min-font-size: 16
+	--paragraph-line-height: 1.8
+	--paragraph-color-light: #cccccc
+	--paragraph-color-dark: #262626
+	/* Dropcap */
+	--dropcap-max-font-size: 110
+	--dropcap-min-font-size: 60
+	--dropcap-line-height: 0.7
+	--dropcap-color-light: #ffffff
+	--dropcap-color-dark: #111111
+	/* Fluid paddings & margins (min values) */
+	--distance-min-xsmall: 30
+	--distance-min-small: 30
+	--distance-min-medium: 50
+	--distance-min-large: 100
+	--distance-min-xlarge: 160
+	/* Fluid paddings & margins (max values) */
+	--distance-max-xsmall: 50
+	--distance-max-small: 120
+	--distance-max-normal: 240
+	--distance-max-large: 360
+	--distance-max-xlarge: 400
+	/* Container & page gutters */
+	--gutter-horizontal: 120px
+	--gutter-vertical: 80px
+	@media screen and (max-width: $xxl)
+		--gutter-horizontal: 80px
+		--gutter-vertical: 60px
+	@media screen and (max-width: $xl)
+		--gutter-horizontal: 60px
+		--gutter-vertical: 40px
+	@media screen and (max-width: $md)
+		--gutter-horizontal: 20px
+		--gutter-vertical: 20px
+	/* preloader circle */
+	--preloader-circle-max-size: 960
+	--preloader-circle-min-size: 280
+
+html
+	font-size: $em-base
+	-webkit-font-smoothing: antialiased
+	text-rendering: optimizeLegibility
+	-webkit-text-rendering: optimizeLegibility
+	-moz-osx-font-smoothing: grayscale
+	font-kerning: none
+body
+	position: relative
+	width: 100%
+	min-width: 320px
+	font-family: $font-primary
+	font-size: 100%
+	line-height: $line-height
+	color: var(--paragraph-color-dark)
+	word-wrap: break-word
+.body_lock-scroll
+	overflow: hidden
+	position: fixed
+	position: sticky
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+img, iframe
+	max-width: 100%
+	height: auto
+a
+	+trans1
+	text-decoration: none
+	color: var(--color-gray-1)
+	&:hover
+		color: var(--color-dark-2)
+		text-decoration: none
+.page-wrapper__content
+	position: relative
+	overflow: hidden
+	z-index: 50

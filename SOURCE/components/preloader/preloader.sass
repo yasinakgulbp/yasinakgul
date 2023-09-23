@@ -1,0 +1,68 @@
+.preloader
+	display: flex
+	align-items: center
+	justify-content: center
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	z-index: 99
+	background-color: #fff
+	overflow: hidden
+.preloader__circle
+	position: fixed
+	top: 50%
+	left: 50%
+	right: 0
+	transform: translate(-50%, -50%)
+	@include fluid('width', var(--preloader-circle-min-size), var(--preloader-circle-max-size))
+	@include fluid('height', var(--preloader-circle-min-size), var(--preloader-circle-max-size))
+	max-width: calc(100vh - var(--gutter-vertical) * 3)
+	max-height: calc(100vh - var(--gutter-vertical) * 3)
+	border-radius: 100%
+	z-index: 1
+	pointer-events: none
+.preloader__content
+	position: fixed
+	top: 50%
+	left: 50%
+	width: 100%
+	height: 100%
+	transform: translate(-50%, -50%)
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	padding: 30px
+	@include fluid('width', var(--preloader-circle-min-size), var(--preloader-circle-max-size))
+	@include fluid('height', var(--preloader-circle-min-size), var(--preloader-circle-max-size))
+	max-height: calc(100vh - var(--gutter-vertical) * 3)
+.preloader__header
+	width: 100%
+.preloader__counter
+	white-space: nowrap
+.preloader__counter-number
+	display: inline-block
+	width: 40px
+.preloader__counter-current
+	text-align: right
+.preloader__counter-total
+	text-align: left
+.preloader__curtain-svg
+	width: 100%
+	height: 100%
+	fill: #ccc
+.preloader__curtain
+	position: absolute
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	display: flex
+	align-items: center
+	justify-content: center
+.preloader__curtain-curve
+	visibility: hidden
+.preloader__curtain-normal
+	visibility: visible

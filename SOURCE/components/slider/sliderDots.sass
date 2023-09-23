@@ -1,0 +1,61 @@
+.slider__dots
+	display: inline-flex
+.slider__dots_vertical
+	flex-direction: column
+	height: auto
+	.slider__dot
+		margin: 6px 0
+.slider__dot
+	position: relative
+	width: 25px
+	height: 25px
+	margin: 0 6px
+	cursor: pointer
+	outline: none
+	display: inline-block
+	border-radius: 100%
+	vertical-align: middle
+	z-index: 50
+	svg
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		margin: auto
+		width: 25px
+		height: 25px
+		border-radius: 100%
+		stroke-width: 10px
+		z-index: 50
+		.circle
+			stroke: $black
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		margin: auto
+		display: block
+		width: 4px
+		height: 4px
+		border-radius: 100%
+		background-color: rgba(104, 104, 104, .5)
+		+trans2
+.slider__dot_active
+	&:after
+		background-color: $black
+
+@media screen and (max-width: $sm)
+	.slider__dot
+		width: 20px
+		height: 20px
+		margin: 0 4px
+		svg
+			width: 20px
+			height: 20px
+	.slider__dots_vertical
+		.slider__dot
+			margin: 4px 0

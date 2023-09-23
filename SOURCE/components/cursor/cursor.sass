@@ -1,0 +1,97 @@
+.cursor
+	position: fixed
+	transform: translate(-50%, -50%)
+	user-select: none
+	pointer-events: none
+	z-index: 10000
+	display: none
+	color: $brown-grey
+.cursor__follower
+	position: relative
+	width: 50px
+	height: 50px
+	border-radius: 100%
+	svg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		#inner, #outer
+			fill: none
+			stroke-linecap: butt
+		#inner
+			stroke-width: 1px
+			stroke: $brown-grey
+			opacity: .7
+		#outer
+			stroke-width: 2px
+			stroke: #c5c6c9
+.cursor-progress
+	cursor: progress !important
+	*
+		cursor: progress !important
+.cursor-none
+	cursor: none !important
+	*
+		cursor: none !important
+.cursor__wrapper
+	position: relative
+	width: 100%
+	height: 100%
+.cursor__arrow
+	position: absolute
+	margin: auto
+	font-size: 24px !important
+	width: 24px
+	height: 24px
+	opacity: 0
+	visibility: hidden
+.cursor__arrow_left
+	top: 0
+	bottom: 0
+	left: 0
+.cursor__arrow_right
+	top: 0
+	bottom: 0
+	right: 0
+.cursor__arrow_up
+	top: 0
+	left: 0
+	right: 0
+.cursor__arrow_down
+	bottom: 0
+	left: 0
+	right: 0
+.cursor__label
+	display: block
+	text-align: center
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	height: 10px
+	margin: auto
+	font-size: 11px
+	line-height: 1.2
+	font-weight: 700
+	letter-spacing: 0.7px
+	text-transform: uppercase
+	opacity: 0
+	visibility: hidden
+	white-space: nowrap
+.cursor__icon
+	display: block
+	text-align: center
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	margin: auto
+	font-size: 28px !important
+	width: 28px
+	height: 28px

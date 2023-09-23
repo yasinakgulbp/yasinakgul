@@ -1,0 +1,37 @@
+.change-text-hover
+	position: relative
+	display: inline-block
+	white-space: nowrap
+	line-height: 1
+	padding-left: 5px
+	&.text-right
+		.change-text-hover__hover
+			left: auto
+			right: 0
+	&.text-lg-right
+		@media screen and (min-width: $md - 1)
+			.change-text-hover__hover
+				left: auto
+				right: 0
+
+.change-text-hover_line-visible
+	.change-text-hover__line
+		transform: scaleX(1) !important
+		transform-origin: 'left center' !important
+		+trans1
+	.change-text-hover__normal
+		transform: translateX(100%)
+
+.change-text-hover__hover
+	display: inline-flex
+	align-items: center
+	position: absolute
+	top: 0
+	
+.change-text-hover__line
+	display: inline-block
+	width: 60px
+	height: 1px
+	background-color: $brown-grey
+	margin-right: 1em
+	transform: scaleX(0)

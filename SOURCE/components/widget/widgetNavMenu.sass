@@ -1,0 +1,42 @@
+.widget_nav_menu
+	ul.menu
+		> li
+			white-space: normal
+			word-break: break-word
+			a
+				display: inline-block
+				padding: 0
+				font-size: 16px
+				line-height: 1.5
+				font-weight: normal
+				text-transform: none
+				letter-spacing: 0
+				color: var(--color-gray-1)
+				&:after, &:before
+					display: none
+				&:hover
+					color: var(--color-dark-1)
+		> li.menu-item-has-children
+			margin-bottom: 1.5em !important
+			a
+				&:after
+					display: none
+	ul.sub-menu
+		background-color: transparent
+		position: relative
+		top: auto
+		left: auto
+		right: auto
+		opacity: 1
+		visibility: visible
+		box-shadow: none
+		border-bottom: none
+		transform: none
+		margin-top: 1em
+		> li
+			border-left: none
+			> a
+				padding: 3px 0
+				border-left: none
+				&:hover
+					background-color: unset

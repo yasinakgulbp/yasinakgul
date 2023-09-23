@@ -1,0 +1,5 @@
+@for $i from 1 through 9
+	[data-scroll-speed='-#{1 + calc($i / 10)}'], [data-scroll-speed='#{1 + calc($i / 10)}']
+		.lazy-bg, .lazy
+			transform: scale(#{1 + calc($i / 40)})
+			transform-origin: center center

@@ -1,0 +1,27 @@
+.slider-testimonials__row
+	border-top: 1px solid $borders-dark
+	padding-top: 1em
+.slider-testimonials__arrows
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: absolute
+	top: 50%
+	left: 0
+	right: 0
+	transform: translateY(-50%)
+	pointer-events: none
+	z-index: 60
+	*
+		pointer-events: initial
+
+@media screen and (max-width: $xs)
+	.slider-testimonials__arrows
+		justify-content: center
+		position: relative
+		transform: none
+		top: auto
+		.slider__arrow
+			top: auto
+			transform: none
+			margin: 10px 5px 0

@@ -1,0 +1,20 @@
+@function strip-unit($value)
+	@return calc($value / ($value * 0 + 1px))
+
+@function em($pixels, $context: $em-base)
+	@if (unitless($pixels))
+		$pixels: $pixels * 1px
+
+	@if (unitless($context))
+		$context: $context * 1px
+
+	@return calc($pixels / $context * 1em)
+
+@function rem($pixels, $context: $em-base)
+	@if (unitless($pixels))
+		$pixels: $pixels * 1px
+
+	@if (unitless($context))
+		$context: $context * 1px
+
+	@return calc($pixels / $context * 1rem)

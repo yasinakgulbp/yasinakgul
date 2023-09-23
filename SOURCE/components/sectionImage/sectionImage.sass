@@ -1,0 +1,52 @@
+.section-image
+	display: flex
+	flex-direction: column
+.section-image__content
+	margin-top: 40px
+.section-image__wrapper
+	position: relative
+	width: 100%
+	height: 100%
+.section-image__caption
+	display: inline-block
+	margin-top: 1em
+.section-image__caption-vertical-left
+	position: absolute
+	bottom: -1em
+	left: -2em
+	transform: rotate(-90deg)
+	transform-origin: left center
+	text-align: left
+.section-image__caption-vertical-right
+	position: absolute
+	top: -2em
+	right: -2em
+	transform: rotate(-90deg)
+	transform-origin: right center
+	text-align: left
+.section-image__wrapper_absolute
+	position: absolute !important
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+.section-image__overlay
+	z-index: 0
+
+@media screen and (max-width: $xl)
+	.section-image__caption-vertical-left
+		left: -1.5em
+	.section-image__caption-vertical-right
+		right: -1.5em
+@media screen and (max-width: $md)
+	.section-image__caption-vertical-left, .section-image__caption-vertical-right
+		position: relative
+		top: auto
+		left: auto
+		right: auto
+		bottom: auto
+		transform: none
+		padding: 0 20px
+		margin-top: 1em
+		text-align: center
+		width: 100%

@@ -1,0 +1,64 @@
+.header[data-arts-theme-text="light"]
+	.logo__text-title
+		color: #fff
+	a
+		&:hover
+			color: #fff
+	.header__burger-line
+		background-color: #fff
+.header
+	&.bg-dark-1, &.bg-dark-2, &.bg-dark-3, &.bg-dark-4
+		.header__burger-line
+			background-color: #fff
+	&.bg-light-1, &.bg-light-2, &.bg-light-3, &.bg-light-4, &.bg-white
+		.header__burger-line
+			background-color: var(--color-gray-1)
+.header.opened[data-arts-header-overlay-theme="light"]
+	color: var(--color-dark-2)
+	p, .paragraph
+		color: var(--color-dark-2)
+	.header__burger-line
+		background-color: var(--color-gray-1)
+	.header__burger
+		&:hover
+			.header__burger-line
+				background-color: var(--color-dark-2)
+	a
+		color: var(--color-gray-1)
+		&:hover
+			color: var(--color-dark-1)
+	.header__overlay-menu-back
+		color: var(--color-dark-2)
+		&:hover
+			.arrow .circle
+				stroke: var(--color-dark-2)
+			.arrow__pointer
+				background-color: var(--color-dark-2)
+			.arrow__triangle
+				border-color: transparent transparent transparent var(--color-dark-2)
+.header.opened[data-arts-header-overlay-theme="dark"]
+	color: #fff
+	.header__burger-line
+		background-color: var(--color-gray-1)
+	.header__burger
+		&:hover
+			.header__burger-line
+				background-color: #fff
+	a
+		color: var(--color-gray-1)
+		&:hover
+			color: #fff
+	.header__overlay-menu-back
+		.arrow .circle
+			stroke: var(--color-gray-1)
+		.arrow__pointer
+			background-color: var(--color-gray-1)
+		.arrow__triangle
+			border-color: transparent transparent transparent var(--color-gray-1)
+		&:hover
+			.arrow .circle
+				stroke: var(--color-gray-1)
+			.arrow__pointer
+				background-color: #fff
+			.arrow__triangle
+				border-color: transparent transparent transparent #fff

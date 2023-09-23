@@ -1,0 +1,74 @@
+.offset_bottom
+	z-index: 60
+
+.pt-small
+	&.offset_bottom
+		padding-top: 0
+		.section-offset__content, > .elementor-container
+			@include fluid-translate-y($distance-min-small, $distance-max-small, $min_width, $max_width)
+		&.mb-small
+			@include fluid('margin-bottom', $distance-min-small, $distance-max-small)
+		&.mb-medium
+			@include fluid('margin-bottom', $distance-min-medium, $distance-max-medium)
+		&.mb-large
+			@include fluid('margin-bottom', $distance-min-large, $distance-max-large)
+
+.pt-medium
+	&.offset_bottom
+		padding-top: 0
+		.section-offset__content, > .elementor-container
+			@include fluid-translate-y($distance-min-medium, $distance-max-medium, $min_width, $max_width)
+		&.mb-small
+			@include fluid('margin-bottom', $distance-min-small, $distance-max-small)
+		&.mb-medium
+			@include fluid('margin-bottom', $distance-min-medium, $distance-max-medium)
+		&.mb-large
+			@include fluid('margin-bottom', $distance-min-large, $distance-max-large)
+
+.pt-large
+	&.offset_bottom
+		padding-top: 0
+		.section-offset__content, > .elementor-container
+			@include fluid-translate-y($distance-min-medium, $distance-max-large, $min_width, $max_width)
+		&.mb-small
+			@include fluid('margin-bottom', $distance-min-small, $distance-max-small)
+		&.mb-medium
+			@include fluid('margin-bottom', $distance-min-medium, $distance-max-medium)
+		&.mb-large
+			@include fluid('margin-bottom', $distance-min-large, $distance-max-large)
+
+.pb-small
+	&.offset_top
+		padding-bottom: 0
+		.section-offset__content, > .elementor-container
+			@include fluid-translate-y($distance-min-small, $distance-max-small, $min_width, $max_width, -1)
+		&.mt-small
+			@include fluid('margin-top', $distance-min-small, $distance-max-small)
+		&.mt-medium
+			@include fluid('margin-top', $distance-min-medium, $distance-max-medium)
+		&.mt-large
+			@include fluid('margin-top', $distance-min-large, $distance-max-large)
+
+.pb-medium
+	&.offset_top
+		padding-bottom: 0
+		.section-offset__content, > .elementor-container
+			@include fluid-translate-y($distance-min-medium, $distance-max-medium, $min_width, $max_width, -1)
+		&.mt-small
+			@include fluid('margin-top', $distance-min-small, $distance-max-small)
+		&.mt-medium
+			@include fluid('margin-top', $distance-min-medium, $distance-max-medium)
+		&.mt-large
+			@include fluid('margin-top', $distance-min-large, $distance-max-large)
+
+.pb-large
+	&.offset_top
+		padding-bottom: 0
+		.section-offset__content, > .elementor-container
+			@include fluid-translate-y($distance-min-large, $distance-max-large, $min_width, $max_width, -1)
+		&.mt-small
+			@include fluid('margin-top', $distance-min-small, $distance-max-small)
+		&.mt-medium
+			@include fluid('margin-top', $distance-min-medium, $distance-max-medium)
+		&.mt-large
+			@include fluid('margin-top', $distance-min-large, $distance-max-large)

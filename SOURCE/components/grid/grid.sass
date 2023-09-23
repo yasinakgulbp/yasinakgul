@@ -1,0 +1,89 @@
+.grid
+	overflow: hidden
+.grid__sizer
+	padding: 0 !important
+	margin: 0 !important
+	height: 0 !important
+.grid__item
+	display: block
+	width: 100%
+.grid__item-link
+	display: block
+	position: relative
+	.figure-image__wrapper-img-inner
+		overflow: hidden
+	.figure-image__wrapper-img-inner, .section-image__caption-horizontal, .figure-image__wrapper-img-zoom
+		+trans1
+		transform-origin: center center
+	.section-image__caption-vertical-left, .section-image__caption-vertical-right
+		+trans1
+	&:hover
+		.section-image__caption
+			color: $brown-grey
+		.figure-image__wrapper-img-zoom
+			transform: scale(1.15)
+		.figure-image__wrapper-img-inner
+			transform: scale(0.9)
+		.section-image__caption-horizontal
+			transform: translate(0, -1.5em)
+			&.text-left
+				transform: translate(1.5em, -2.0em)
+			&.text-right
+				transform: translate(-1.5em, -2.0em)
+		.section-image__caption-vertical-left
+			transform: rotate(-90deg) translate(2.0em, 1.5em)
+		.section-image__caption-vertical-right
+			transform: rotate(-90deg) translate(-2.0em, -1.5em)
+
+@media screen and (max-width: $xl)
+	.grid
+		margin-left: auto
+		margin-right: auto
+
+@media screen and (max-width: $md)
+	.grid__item-link
+		&:hover
+			.section-image__caption-vertical-left, .section-image__caption-vertical-right
+				transform: rotate(0deg) translate(0, -1.5em)
+
+@media only screen and (min-width: $md + 1px)
+	.grid__item_desktop-12
+		flex: 0 0 100%
+		max-width: 100%
+	.grid__item_desktop-6
+		flex: 0 0 50%
+		max-width: 50%
+	.grid__item_desktop-4
+		flex: 0 0 33.333333%
+		max-width: 33.333333%
+	.grid__item_desktop-3
+		flex: 0 0 25%
+		max-width: 25%
+
+@media only screen and (min-width: $sm + 1px) and (max-width: $md)
+	.grid__item_tablet-12
+		flex: 0 0 100%
+		max-width: 100%
+	.grid__item_tablet-6
+		flex: 0 0 50%
+		max-width: 50%
+	.grid__item_tablet-4
+		flex: 0 0 33.333333%
+		max-width: 33.333333%
+	.grid__item_tablet-3
+		flex: 0 0 25%
+		max-width: 25%
+
+@media only screen and (max-width: $sm)
+	.grid__item_mobile-12
+		flex: 0 0 100%
+		max-width: 100%
+	.grid__item_mobile-6
+		flex: 0 0 50%
+		max-width: 50%
+	.grid__item_mobile-4
+		flex: 0 0 33.333333%
+		max-width: 33.333333%
+	.grid__item_mobile-3
+		flex: 0 0 25%
+		max-width: 25%

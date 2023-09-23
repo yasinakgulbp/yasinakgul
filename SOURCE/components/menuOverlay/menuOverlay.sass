@@ -1,0 +1,29 @@
+.menu-overlay
+	+reset-ul
+	> li
+		display: block
+		margin-top: 0.5em
+		margin-bottom: 0.5em
+		> a
+			display: inline-block
+.menu-overlay__item-wrapper
+	width: 100%
+	height: 100%
+.menu-overlay .sub-menu
+	display: inline-flex
+	flex-direction: column
+	justify-content: flex-start
+	position: absolute
+	bottom: 0
+	left: 0
+	height: 100%
+	width: 100%
+	+reset-ul
+	z-index: -1
+	opacity: 0
+	visibility: hidden
+	> li
+		display: block
+		> a
+			display: inline-block
+			padding: 8px 0

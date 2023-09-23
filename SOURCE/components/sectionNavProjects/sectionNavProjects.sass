@@ -1,0 +1,41 @@
+.section-nav-projects[data-arts-os-animation]
+	visibility: visible !important
+.section-nav-projects
+	flex-wrap: wrap
+	overflow: hidden
+	height: 200vh
+.section-nav-projects__wrapper-scroll-down
+	position: absolute
+	bottom: calc(var(--gutter-vertical) - 10px)
+	left: 0
+	right: 0
+	margin: auto
+.section__divider
+	display: block
+	width: 100%
+	height: 1px
+	background-color: $borders-dark
+	position: absolute
+.section__divider_top
+	top: 0
+	left: 0
+	right: 0
+.section-nav-projects__link
+	display: block
+	pointer-events: none
+	opacity: .2
+	color: var(--color-dark-2)
+.section-nav-projects__header
+	cursor: pointer
+	&:hover
+		.section-nav-projects__link
+			opacity: 1 !important
+			color: var(--color-dark-1) !important
+.section-nav-projects__next-image
+	right: 0
+	left: 0
+	margin: 0 auto
+	max-width: 500px
+.section-nav-projects__inner_actual
+	height: 100vh
+	overflow: hidden

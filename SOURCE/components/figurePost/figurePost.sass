@@ -1,0 +1,60 @@
+.figure-post__categories
+	+reset-ul
+	&:before
+		content: ''
+		display: inline-block
+		vertical-align: middle
+		@include fluid('width', 40, 60)
+		height: 1px
+		margin-right: 1em
+		background-color: var(--color-gray-1)
+	li
+		display: inline-block
+.figure-post__media
+	> a
+		display: block
+		position: relative
+		overflow: hidden
+		img
+			transition: transform 0.3s ease
+			transform-origin: center center
+			will-change: transform
+		&:hover
+			img
+				transform: scale(1.1)
+.figure-post__date
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	will-change: transform
+	position: absolute
+	top: 0
+	left: 0
+	@include fluid('width', 70, 100)
+	@include fluid('height', 70, 100)
+	background-color: #fff
+	z-index: 50
+	text-align: center
+.figure-post__date_centered
+	right: 0
+	margin: 0 auto
+.figure-post__date-day
+	display: block
+	font-weight: normal
+	line-height: 1
+.figure-post__date-month
+	display: block
+	line-height: 1
+	+small-caps
+
+.figure-post__date_small
+	@include fluid('width', 60, 80)
+	@include fluid('height', 60, 80)
+	.figure-post__date-day
+		font-weight: normal
+.figure-post__content
+	> *:first-child
+		margin-top: 0
+	> *:last-child
+		margin-bottom: 0

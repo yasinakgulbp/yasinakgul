@@ -1,0 +1,26 @@
+.section-services__wrapper-letter
+	display: inline-block
+	position: absolute
+	bottom: 66%
+	z-index: 0
+.section-services__wrapper-letter_right
+	right: 100px
+.section-services__wrapper-letter_left
+	left: 100px
+.section-services__letter
+	display: inline-block
+	line-height: 1
+	@include fluid-type(67, 400)
+	color: $black
+	opacity: .05
+	font-family: $font-secondary
+.section-services__wrapper-content
+	position: relative
+	
+@media screen and (max-width: $md)
+	.section-services__container
+		padding-left: 0
+		padding-right: 0
+		>.row
+			margin-left: 0
+			margin-right: 0

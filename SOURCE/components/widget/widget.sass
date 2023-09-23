@@ -1,0 +1,41 @@
+.widget
+	margin-bottom: 2em
+	font-size: 16px
+	p
+		font-size: 16px
+		&:last-of-type
+			margin-bottom: 0
+	select
+		width: 100%
+		max-width: 100%
+	ul
+		+reset-ul
+		text-align: left
+		li
+			display: block
+			margin-bottom: 1em
+			&:last-child
+				margin-bottom: 0
+		ul
+			width: 100%
+			padding-left: 1em
+			margin-top: 1em
+		.sub-menu
+			padding-left: 1em
+			margin-top: 1em
+
+.widgettitle
+	display: block
+	font-family: $font-primary
+	@include fluid-type(var(--paragraph-min-font-size), var(--paragraph-max-font-size))
+	line-height: var(--paragraph-line-height)
+	font-weight: 600
+	color: $black
+	margin-bottom: 1em
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		height: 2px
+		background-color: $black
+		margin-bottom: 0.5em

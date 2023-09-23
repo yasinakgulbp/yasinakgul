@@ -1,0 +1,95 @@
+.section-demo__bg
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 100%
+	max-width: calc(33vw - var(--gutter-horizontal))
+.section-demo__bg_right
+	right: 0
+.section-demo__bg_left
+	left: 0
+.section-demo__bg_wide
+	max-width: calc(37.5vw - var(--gutter-horizontal))
+.section-demo__stacked-images
+	display: flex
+	z-index: 100
+.section-demo__stacked-image
+	position: relative
+	width: 100%
+	height: 100%
+	box-shadow: 0 0 40px 0 rgba(0,0,0,0.03)
+	&:nth-child(1)
+		z-index: 50
+	&:nth-child(2)
+		z-index: 40
+		margin-left: -50%
+		margin-top: 80px
+	&:nth-child(3)
+		z-index: 30
+		margin-left: -50%
+		margin-top: 160px
+.section-demo__content
+	max-width: 550px
+.section-demo__wrapper-button
+	position: absolute
+	top: 0
+	bottom: 0
+	margin: auto
+	z-index: 100
+	display: flex
+	align-items: center
+	justify-content: center
+.section-demo__wrapper-button_right
+	right: calc(33vw - var(--gutter-horizontal))
+	transform: translateX(50%)
+.section-demo__wrapper-button_left
+	left: calc(37.5vw - var(--gutter-horizontal))
+	transform: translateX(-50%)
+
+@media screen and (min-width: $xxl + 1)
+	.section-demo__container-left
+		padding-left: 0
+	.section-demo__container-right
+		padding-right: 0
+@media screen and (max-width: $xxl)
+	.section-demo__content
+		max-width: 450px
+	.section-demo__bg
+		max-width: calc(37.5vw - var(--gutter-horizontal))
+	.section-demo__wrapper-button_right
+		right: calc(37.5vw - var(--gutter-horizontal))
+	.section-demo__wrapper-button_left
+		left: calc(37.5vw - var(--gutter-horizontal))
+
+@media screen and (max-width: 1920px)
+	.section-demo__bg_wide
+		max-width: calc(42vw - var(--gutter-horizontal) / 2)
+	.section-demo__wrapper-button_left
+		left: calc(42vw - var(--gutter-horizontal) / 2)
+
+@media screen and (max-width: $xxl)
+	.section-demo__bg_wide
+		max-width: calc(50vw - var(--gutter-horizontal))
+	.section-demo__wrapper-button_left
+		left: calc(50vw - var(--gutter-horizontal))
+
+@media screen and (max-width: $md)
+	.section-demo__content
+		max-width: 100%
+	.section-demo__bg
+		position: relative
+		min-height: 70vh
+		max-width: 100%
+		background-color: transparent !important
+	.section-demo__stacked-image
+		&:nth-child(1)
+			z-index: 50
+		&:nth-child(2)
+			z-index: 40
+			margin-left: -25%
+			margin-top: 40px
+		&:nth-child(3)
+			z-index: 30
+			margin-left: -25%
+			margin-top: 80px
+	

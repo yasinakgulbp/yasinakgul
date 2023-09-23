@@ -1,0 +1,29 @@
+.slider-halfscreen-projects
+	height: 100%
+.slider-halfscreen-projects_pt
+	padding-top: 180px
+.slider-halfscreen-projects__content
+	padding-bottom: 80px
+	padding-left: 80px
+	z-index: 100
+.slider-halfscreen-projects__images_reduced-width-right
+	max-width: calc(100% - var(--gutter-horizontal) - 40px)
+	margin-left: 0 !important
+
+@media screen and (max-width: $md)
+	.slider-halfscreen-projects_pt
+		padding-top: 0
+	.slider-halfscreen-projects__images
+		height: 100vh
+	.slider-halfscreen-projects__content
+		padding: var(--gutter-vertical) 0 !important
+		max-width: calc(100% - var(--gutter-horizontal) * 4)
+		margin-left: var(--gutter-horizontal)
+		position: absolute
+		left: 0
+		bottom: 0
+		right: 0
+	.slider-halfscreen-projects__col
+		position: static !important
+	.slider-halfscreen-projects__images_reduced-width-right
+		max-width: 100% !important

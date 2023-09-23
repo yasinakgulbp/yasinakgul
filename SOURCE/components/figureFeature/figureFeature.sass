@@ -1,0 +1,19 @@
+.figure-feature
+	position: relative
+	text-align: center
+	display: inline-flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	@include fluid('padding-top', 40, 100)
+	@include fluid('padding-bottom', 40, 100)
+	width: 100%
+	outline: 1px solid $borders-dark
+	outline-offset: -20px
+	backface-visibility: hidden
+	
+.figure-feature__icon
+	@include fluid('height', 60, 80)
+	img
+		width: auto
+		height: 100%

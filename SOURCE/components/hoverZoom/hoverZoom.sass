@@ -1,0 +1,24 @@
+.hover-zoom
+	backface-visibility: hidden
+	&:hover:not(:focus)
+		.hover-zoom__zoom
+			transform: scale(1.15)
+		.hover-zoom__inner
+			transform: scale(0.9)
+		.section-image__caption-horizontal
+			transform: translate(0, -15px)
+			transition-delay: 0.06s
+			&.text-left
+				transform: translate(15px, -15px)
+			&.text-right
+				transform: translate(-15px, -15px)
+.hover-zoom__inner
+	overflow: hidden
+.hover-zoom__zoom, .hover-zoom__inner
+	transform-origin: center center
+	transition: transform 0.3s ease
+	will-change: transform
+	backface-visibility: hidden
+.hover-zoom__caption
+	transition: transform 0.3s ease
+	will-change: transform

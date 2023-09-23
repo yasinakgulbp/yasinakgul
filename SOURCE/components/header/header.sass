@@ -1,0 +1,175 @@
+.header
+	pointer-events: none
+	padding-top: var(--gutter-vertical)
+	padding-bottom: 0
+	a, select, input
+		pointer-events: initial
+	&.opened
+		.logo
+			pointer-events: none
+.header_absolute
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 500
+.header_fixed
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 500
+.header__container
+	position: relative
+	z-index: 501
+.header__col
+	opacity: 0
+	visibility: hidden
+.header__wrapper-burger
+	position: absolute
+	width: 80px
+	height: 80px
+.header__burger
+	display: inline-block
+	position: relative
+	width: 40px
+	height: 38px
+	vertical-align: middle
+	cursor: pointer
+	pointer-events: initial
+	z-index: 500
+	&:hover
+		.header__burger-line
+			&:nth-of-type(1)
+				transform: scaleX(1)
+			&:nth-of-type(2)
+				transform: scaleX(0.75)
+			&:nth-of-type(3)
+				transform: scaleX(1)
+.header__burger_opened, .header__burger_opened:hover
+	.header__burger-line
+		&:nth-of-type(1)
+			transform: scaleX(1) rotate(45deg) translate(13px, 20px)
+		&:nth-of-type(2)
+			transform: scaleX(0)
+		&:nth-of-type(3)
+			transform: scaleX(1) rotate(-45deg) translate(13px, -20px)
+.header__burger-line
+	position: absolute
+	width: 100%
+	height: 2px
+	background-color: var(--color-dark-2)
+	+trans1
+	&:nth-of-type(1)
+		top: 9px
+		left: 0
+		transform-origin: right center
+		transform: scaleX(0.75)
+	&:nth-of-type(2)
+		top: 0
+		left: 0
+		bottom: 0
+		margin: auto
+		transform-origin: left center
+	&:nth-of-type(3)
+		bottom: 9px
+		left: 0
+		transform-origin: right center
+		transform: scaleX(0.75)
+.header__wrapper-menu
+	position: relative
+	width: 100%
+	max-width: 50%
+	margin: auto 0
+.header__wrapper-overlay-menu
+	display: flex
+	flex-wrap: wrap
+	// align-items: center
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	z-index: 500
+	background: none !important
+	background-color: unset !important
+	overflow-x: hidden
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+	opacity: 0
+	visibility: hidden
+	pointer-events: initial
+.header_menu-right
+	.menu
+		.sub-menu
+			left: auto
+			right: 15px
+			ul
+				left: auto
+				right: calc(100% + 1px)
+.header__overlay-menu-back
+	display: inline-block
+	position: absolute
+	top: 0
+	bottom: 0
+	margin: auto 0
+	left: -2px
+	cursor: pointer
+	opacity: 0
+	visibility: hidden
+	pointer-events: initial
+.header-curtain
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	transform: translateY(100%)
+	margin: auto
+	z-index: 100
+	overflow: hidden
+.header-curtain_transition
+	z-index: 101
+.header__wrapper-overlay-widgets
+	margin-top: auto
+	width: 100%
+	max-width: 50%
+.header__widget-content
+	font-size: 14px
+	p
+		font-size: 14px
+		line-height: 2
+		margin-top: 0
+		margin-bottom: 0
+// [data-arts-header-animation="intransition"]
+// 	a, .header__burger
+// 		pointer-events: none !important
+
+@media screen and (max-width: $md)
+	.header__wrapper-overlay-menu
+		text-align: center
+	.header__wrapper-menu
+		max-width: 100%
+		margin-top: calc(var(--gutter-horizontal) * 2)
+		margin-bottom: calc(var(--gutter-horizontal) * 2)
+	.header__wrapper-overlay-widgets
+		max-width: 100%
+		margin-top: 0
+		margin-bottom: calc(var(--gutter-horizontal) * 2)
+	.header__widget
+		margin-bottom: 1em
+		&:last-child
+			margin-bottom: 2em
+	.header__burger
+		width: 30px
+		height: 35px
+	.header__burger_opened, .header__burger_opened:hover
+		.header__burger-line
+			&:nth-of-type(1)
+				transform: scaleX(1) rotate(45deg) translate(10px, 15px)
+			&:nth-of-type(2)
+				transform: scaleX(0)
+			&:nth-of-type(3)
+				transform: scaleX(1) rotate(-45deg) translate(11px, -16px)
+	.header__overlay-menu-back
+		top: 2px
